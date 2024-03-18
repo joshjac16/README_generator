@@ -1,7 +1,70 @@
-// TODO: Include packages needed for this application
+const fs = require("fs");
+const inquirer = require("inquirer");
+const generateMarkdown = require("./utils/generateMarkdown");
 
 // TODO: Create an array of questions for user input
-const questions = [];
+const questions = [
+  {
+    type: "input",
+    Name: "Title",
+    message: "What is the title of your project?",
+  },
+  {
+    type: "input",
+    Name: "Description",
+    message: "Enter a description of your project.",
+  },
+  {
+    type: "input",
+    Name: "Installation",
+    message: "Explain to users how to install your program",
+  },
+  {
+    type: "input",
+    Name: "Usage",
+    message: "Explain how your program can be used",
+  },
+  {
+    type: "input",
+    Name: "Usage",
+    message: "Explain how your program can be used",
+  },
+  {
+    type: "list",
+    name: "license",
+    message: "Please select a license for this project.",
+    choices: [
+      "GNU AGPLv3",
+      "GNU GPLv3",
+      "GNU LGPLv3",
+      "Apache 2.0",
+      "Boost Software 1.0",
+      "MIT",
+      "Mozilla",
+    ],
+  },
+  {
+    type: "input",
+    name: "contributing",
+    message: "How can users contribute to your project.",
+  },
+  {
+    type: "input",
+    name: "tests",
+    message:
+      "Please enter any testing instructions you would like to provide for this project.",
+  },
+  {
+    type: "input",
+    name: "userName",
+    message: "What is your GitHub username?",
+  },
+  {
+    type: "input",
+    name: "userEmail",
+    message: "What is your GitHub email address that contributors may contact?",
+  },
+];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
