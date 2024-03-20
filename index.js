@@ -3,31 +3,38 @@ const inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown");
 
 // TODO: Create an array of questions for user input
+
+function validateInput(value) {
+  if (value != "") {
+    return true;
+  } else {
+    return "Please answer the question with some kind on input.";
+  }
+}
 const questions = [
   {
     type: "input",
-    name: "Title",
+    name: "title",
     message: "What is the title of your project?",
+    validate: validateInput,
   },
   {
     type: "input",
     name: "Description",
     message: "Enter a description of your project.",
+    validate: validateInput,
   },
   {
     type: "input",
     name: "Installation",
     message: "Explain to users how to install your program",
+    validate: validateInput,
   },
   {
     type: "input",
     name: "Usage",
     message: "Explain how your program can be used",
-  },
-  {
-    type: "input",
-    name: "Usage",
-    message: "Explain how your program can be used",
+    validate: validateInput,
   },
   {
     type: "list",
@@ -47,22 +54,32 @@ const questions = [
     type: "input",
     name: "contributing",
     message: "How can users contribute to your project.",
+    validate: validateInput,
   },
   {
     type: "input",
     name: "tests",
     message:
       "Please enter any testing instructions you would like to provide for this project.",
+    validate: validateInput,
   },
   {
     type: "input",
     name: "userName",
     message: "What is your GitHub username?",
+    validate: validateInput,
   },
   {
     type: "input",
     name: "userEmail",
     message: "What is your GitHub email address that contributors may contact?",
+    validate: (emailInput) => {
+      if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailInput)) {
+        return true;
+      } else {
+        return "Not a valid email address. Please enter a valid email address.";
+      }
+    },
   },
 ];
 
