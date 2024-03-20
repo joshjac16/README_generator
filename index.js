@@ -6,27 +6,27 @@ const generateMarkdown = require("./utils/generateMarkdown");
 const questions = [
   {
     type: "input",
-    Name: "Title",
+    name: "Title",
     message: "What is the title of your project?",
   },
   {
     type: "input",
-    Name: "Description",
+    name: "Description",
     message: "Enter a description of your project.",
   },
   {
     type: "input",
-    Name: "Installation",
+    name: "Installation",
     message: "Explain to users how to install your program",
   },
   {
     type: "input",
-    Name: "Usage",
+    name: "Usage",
     message: "Explain how your program can be used",
   },
   {
     type: "input",
-    Name: "Usage",
+    name: "Usage",
     message: "Explain how your program can be used",
   },
   {
@@ -70,16 +70,16 @@ const questions = [
 function writeToFile(fileName, data) {
   fs.writeFile(fileName, generateMarkdown(data), function (err) {
     if (err) {
-        return console.log(err);
+      return console.log(err);
     }
-});
+  });
 }
 
 // TODO: Create a function to initialize app
 function init() {
   inquirer.prompt(questions).then((data) => {
     writeToFile("./example/README.md", data);
-});
+  });
 }
 
 // Function call to initialize app
