@@ -1,7 +1,7 @@
-#  Head_Scratcher
+# Love is blind
 
   ### Description
-  Program to help you scratch your head when you cannot solve the bugs 
+  blind love
 
 
 
@@ -18,27 +18,27 @@
 
 
   ### Installation
-  use git pull and npm i
+  insatll
 
   ### Usage 
-  freely
+  in life
 
   ### License
    
-  [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)]
+  ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-  [Apache 2.0](https://choosealicense.com/licenses/apache-2.0/)
+  [MIT license](https://choosealicense.com/licenses/mit/)
 
   ### Contributing
-  By making it better
+  okay
 
   ### Tests
-  npm test
+  no
 
   ### Github
   Please check my other projects at 
   (https://github.com/joshjac16)
 
   ### Email
-  josh11jac16@gmail.com
+  n@n.com
 

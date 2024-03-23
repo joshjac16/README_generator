@@ -2,8 +2,8 @@ const fs = require("fs");
 const inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown");
 
-// TODO: Create an array of questions for user input
 
+// The function below validates if the user input a value or not 
 function validateInput(value) {
   if (value != "") {
     return true;
@@ -11,7 +11,8 @@ function validateInput(value) {
     return "Please answer the question with some kind on input.";
   }
 }
-const questions = [
+
+const questions = [    //array of questions 
   {
     type: "input",
     name: "title",
@@ -83,7 +84,7 @@ const questions = [
   },
 ];
 
-// TODO: Create a function to write README file
+//The below function writes user inputs into the README file
 function writeToFile(fileName, data) {
   fs.writeFile(fileName, generateMarkdown(data), function (err) {
     if (err) {
@@ -92,12 +93,12 @@ function writeToFile(fileName, data) {
   });
 }
 
-// TODO: Create a function to initialize app
+// function initializes the program and prompts the questions  
 function init() {
   inquirer.prompt(questions).then((data) => {
     writeToFile("./example/README.md", data);
   });
 }
 
-// Function call to initialize app
+// call to initialize app
 init();
