@@ -1,7 +1,7 @@
-# Love is blind
+# Weather_dashboard
 
   ### Description
-  blind love
+  Helps a user find the weather for a searched city
 
 
 
@@ -18,10 +18,10 @@
 
 
   ### Installation
-  insatll
+  clone repo
 
   ### Usage 
-  in life
+  enter a city name and it shows a detailed forcast and the temp for the next 5 days
 
   ### License
    
@@ -30,15 +30,15 @@
   [MIT license](https://choosealicense.com/licenses/mit/)
 
   ### Contributing
-  okay
+  create new branch and contact me
 
   ### Tests
-  no
+  run in browser 
 
   ### Github
   Please check my other projects at 
   (https://github.com/joshjac16)
 
   ### Email
-  n@n.com
+  josh11jac16@gmail.com
 
